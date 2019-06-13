@@ -17,5 +17,6 @@ class Student
             grade TEXT
       );
     SQL
+    db.execute(sql)
   end
 end
