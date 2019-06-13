@@ -8,4 +8,14 @@ class Student
     @id = id
   end
 
+  def self.create_table
+    db = DB[:conn]
+    sql = <<-SQL
+      CREATE TABLE students (
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            grade TEXT
+      );
+    SQL
+  end
 end
