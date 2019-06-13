@@ -9,7 +9,6 @@ class Student
   end
 
   def self.create_table
-    db = DB[:conn]
     sql = <<-SQL
       CREATE TABLE students (
             id INTEGER PRIMARY KEY,
@@ -17,6 +16,6 @@ class Student
             grade TEXT
       );
     SQL
-    db.execute(sql)
+    DB[:conn].execute(sql)
   end
 end
